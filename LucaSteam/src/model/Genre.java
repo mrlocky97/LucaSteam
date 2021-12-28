@@ -36,14 +36,18 @@ public enum Genre {
 	  * @return 
 	  * 
 	  * */
-	    public static Genre switchPlatform(String val) {
-	        if (Genre.values == null) {
-	            Genre.values = Genre.values();
-	            
-	        }
-	        
-	        return Genre.values[val.length()];
-	    }
+	 
+	 //Comprobar que no nos devuelve un null
+	 public static Genre switchPlatform(String val) {
+
+			try {
+				return Genre.valueOf(val);
+			} catch (Exception e) {
+				e.getMessage();
+				return null;
+			}
+
+		}
 	
 	
 	
