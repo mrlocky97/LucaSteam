@@ -1,5 +1,6 @@
 package controller;
 
+import dataInput.DataInput;
 import gui.Menu;
 import services.ISuperServices;
 import services.SuperServices;
@@ -94,7 +95,8 @@ public class User {
     }
 
     private boolean exit() throws Exception {//ScanString lee un dato por Scanner tipo String
-        String sino = Datos.ScanString("   Estas seguro de que desea guardar y salir? (S/N)");
+        System.out.println("Estas seguro de que desea guardar y salir? (S/N)");
+    	String sino = DataInput.writeLine();
         return (sino.toUpperCase().charAt(0) != 'S'); //La cambia a mayuscula
     }
 

@@ -2,6 +2,8 @@ package data;
 
 
 import model.Game;
+import model.Genre;
+import model.Platform;
 
 /*
  * Aqui incluimos los metodos vacios, ya que SOLO ES UN INTERFACE.
