@@ -83,7 +83,7 @@ public class User {
                     
                   //Guardar y salir
                 case 0:
-                	service.SaveList();
+                	services.SaveList();
                     continuar = exit();
                     break;
             }
