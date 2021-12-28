@@ -5,13 +5,12 @@ import model.Game;
 
 public interface ISuperServices {
 	
-	public boolean AddGame() throws StockException;
-    public boolean AddGame(Game g) throws StockException;  
-    public boolean deleteGame() throws StockException, Exception;
-    public void PrintGames();
-    public boolean AmountGames() throws StockException, Exception;
-    public void ChargerFileCVS();
-    public void SaveFileCSV();
-    
+	public boolean addGame();
+    public boolean addGame(Game g);  
+    //public boolean deleteGame() throws StockException, Exception;
+    public void printGames();
+    //public boolean amountGames() throws StockException, Exception;
+    //public void saveFileCSV();
+    public void loadList();
  
 }

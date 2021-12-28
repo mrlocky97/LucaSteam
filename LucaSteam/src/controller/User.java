@@ -34,57 +34,58 @@ public class User {
             switch (DataInput.writeNumber()) {//Lee un dato de tipo Int
                 case 1:
                     //Cargar archivo en el programa y generar List (collection)
-                    services.ChargeList();
+                    services.loadList();
                     break;
 
                 case 2:
                     //Añadir un juego a la List
-                    services.AddGame();
+                	// pasar por parametro un juego para añadir
+                    services.addGame();
                     break;
 
                 case 3:
                     //Mostrar la Lista de Juegos completa.
-                    services.PrintGames();
+                    services.printGames();
                     break;
 
                 case 4:
                     //Mostrar la Lista de Juegos filtrados por Nombre
-                    services.ShowGameFilterName();
+                 //   services.ShowGameFilterName();
                     break;
 
                 case 5:
                 	//Mostrar la Lista de Juegos filtrados por Plataforma
-                    services.ShowGameFilterPlatform();
+                  //  services.ShowGameFilterPlatform();
                     break;
 
                 case 6:
                 	//Mostrar la Lista de Juegos filtrados por Año
-                    services.ShowGameFilterYear();
+                  //  services.ShowGameFilterYear();
                     break;
 
                 case 7:
                 	//Mostrar la Lista de Juegos filtrados por Genero
-                    services.ShowGameFilterGenre();
+                  //  services.ShowGameFilterGenre();
                     break;
 
                 case 8:
                 	//Mostrar la Lista de Juegos filtrados por Editor
-                    services.ShowGameFilterPublisher();
+               //     services.ShowGameFilterPublisher();
                     break;
                     
                 case 9:
                 	//Actualizar una categoria de un juego
-                    services.UpdateGame();
+                  //  services.UpdateGame();
                     break;
                    
                 case 10:
                     //Borrar un Juego
-                    services.DeleteGame();
+                  //  services.DeleteGame();
                     break;
                     
                   //Guardar y salir
                 case 0:
-                	services.SaveList();
+                //	services.SaveList();
                     continuar = exit();
                     break;
             }

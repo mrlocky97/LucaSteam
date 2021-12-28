@@ -3,89 +3,84 @@ package model;
 import dataInput.DataInput;
 
 public class Game {
- private String name;
- private int year;
- private String publisher;
- private Genre genre;
- private Platform platform;
- 
- public Game() {
-	 }
- 
- public Game(String name, int year, String publisher, Genre genre, Platform platform) {
-	 this.name= name;
-	 this.year=year;
-	 this.publisher=publisher;
-	 this.genre= genre;
-	 this.platform=platform;
- }
+	private String name;
+	private int year;
+	private String publisher;
+	private Genre genre;
+	private Platform platform;
 
-public String getName() {
-	return name;
-}
+	public Game() {
+	}
 
-public void setName(String name) {
-	this.name = name;
-}
+	public Game(String name, int year, String publisher, Genre genre, Platform platform) {
+		this.name = name;
+		this.year = year;
+		this.publisher = publisher;
+		this.genre = genre;
+		this.platform = platform;
+	}
 
-public int getYear() {
-	return year;
-}
+	public String getName() {
+		return name;
+	}
 
-public void setYear(int year) {
-	this.year = year;
-}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-public String getPublisher() {
-	return publisher;
-}
+	public int getYear() {
+		return year;
+	}
 
-public void setPublisher(String publisher) {
-	this.publisher = publisher;
-}
+	public void setYear(int year) {
+		this.year = year;
+	}
 
-public Genre getGenre() {
-	return genre;
-}
+	public String getPublisher() {
+		return publisher;
+	}
 
-public void setGenre(Genre genre) {
-	this.genre = genre;
-}
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
+	}
 
-public Platform getPlatform() {
-	return platform;
-}
+	public Genre getGenre() {
+		return genre;
+	}
 
-public void setPlatform(Platform platform) {
-	this.platform = platform;
-}
- 
- public boolean newGame () {
-	 
-	 try {
-		 System.out.println("Escribe el Nombre del Juego");
-		 this.name = DataInput.writeLine();
-		 System.out.println("Escribe el Año");
-		 this.year =DataInput.writeNumber();
-		 //this.platform;
-		 //this.genre;
-		 return true;
-	 }catch(Exception e) {
-		 e.getStackTrace();
-		 return false;
-	 }
-	 
- }
+	public void setGenre(Genre genre) {
+		this.genre = genre;
+	}
 
-@Override
-public String toString() {
-	return "Game [name=" + name + ", year=" + year + ", publisher=" + publisher + ", genre=" + genre + ", platform="
-			+ platform + "]";
-}
- 
- 
- 
- 
+	public Platform getPlatform() {
+		return platform;
+	}
 
+	public void setPlatform(Platform platform) {
+		this.platform = platform;
+	}
+
+	public boolean newGame() {
+
+		try {
+			System.out.println("Escribe el Nombre del Juego");
+			this.name = DataInput.writeLine();
+			System.out.println("Escribe el Año");
+			this.year = DataInput.writeNumber();
+			// this.platform;
+			// this.genre;
+			return true;
+		} catch (Exception e) {
+			e.getStackTrace();
+			return false;
+		}
+
+	}
+
+	@Override
+	public String toString() {
+		return "Game [name=" + name + ", year=" + year + ", publisher=" + publisher + ", genre=" + genre + ", platform="
+				+ platform + "]";
+	}
 
 }
