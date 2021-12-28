@@ -60,7 +60,7 @@ public void setPlatform(Platform platform) {
 	this.platform = platform;
 }
  
- public void newGame () {
+ public boolean newGame () {
 	 
 	 try {
 		 System.out.println("Escribe el Nombre del Juego");
@@ -69,9 +69,12 @@ public void setPlatform(Platform platform) {
 		 this.year =DataInput.writeNumber();
 		 //this.platform;
 		 //this.genre;
+		 return true;
 	 }catch(Exception e) {
 		 e.getStackTrace();
+		 return false;
 	 }
+	 
  }
 
 @Override

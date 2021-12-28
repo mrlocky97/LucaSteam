@@ -6,6 +6,8 @@ import java.util.Map.Entry;
 import java.util.Iterator;
 
 import model.Game;
+import model.Genre;
+import model.Platform;
 
 
 /*
@@ -28,7 +30,7 @@ public class Stock implements IStock{
 	 * @param item
 	 * return: void
 	 */
-	public void addGame(Integer key, Game item){
+	public void addGame(Integer key, Game item){   ///INTEGER DE KEY??????
 		if(!gameExists(key)) 
 			items.put(key, item);
 		else
