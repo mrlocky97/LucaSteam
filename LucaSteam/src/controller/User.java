@@ -31,7 +31,7 @@ public class User {
         boolean continuar = true;
 
         try {
-            switch (Datos.ScanInt()) {//Lee un dato de tipo Int
+            switch (DataInput.writeNumber()) {//Lee un dato de tipo Int
                 case 1:
                     //Cargar archivo en el programa y generar List (collection)
                     services.ChargeList();

@@ -14,10 +14,9 @@ public class SuperServices implements ISuperServices {
 	*@return: Un Objeto de tipo Game
 	*
 	*/
-	public boolean AddGame() throws StockException {
-        Game g = new Game();
-        g.createGame();//Comprobar nombre del metodo en la clase Game
-        return this.AddGame(g);
+	public boolean addGame() throws StockException {
+        Game g = new Game();   
+        return g.newGame();
     }
 	
 	/*
@@ -27,9 +26,9 @@ public class SuperServices implements ISuperServices {
 	*
 	*/
 	
-    public boolean AddGame(Game g) throws StockException  {
+    public boolean addGame(Game g) throws StockException  {
         //Habria que decidir un algoritmo de códigos (una funciona Hash)
-        return stock.AddGame((int) (Math.random() * 100000), g);
+        return stock.addGame(g);  //////SE LE HA BORRADO EL KEY, PORQUE ERA UN INTEGER. Y ya no tiene integer nuestro Game.,.
     }
 	
     /*
