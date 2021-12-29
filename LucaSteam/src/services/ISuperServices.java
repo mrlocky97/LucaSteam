@@ -1,16 +1,15 @@
 package services;
 
-import exceptions.StockExceptions;
 import model.Game;
 
 public interface ISuperServices {
 	
 	public boolean addGame();
     public boolean addGame(Game g);  
-    //public boolean deleteGame() throws StockException, Exception;
+    //public boolean deleteGame() 
     public void printGames();
-    //public boolean amountGames() throws StockException, Exception;
-    //public void saveFileCSV();
+    //public boolean amountGames()
+   
     public void loadList();
  
 }

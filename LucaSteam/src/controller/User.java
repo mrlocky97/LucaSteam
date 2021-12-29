@@ -1,9 +1,9 @@
 package controller;
 
-import dataInput.DataInput;
 import gui.Menu;
 import services.ISuperServices;
 import services.SuperServices;
+import utilidades.DataInput;
 
 
 public class User {

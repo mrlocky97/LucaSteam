@@ -1,10 +1,10 @@
 package model;
 
-import dataInput.DataInput;
+import utilidades.DataInput;
 
 public class Game {
 	private String name;
-	private int year;
+	private int year;  //CAMBIAR A STRING
 	private String publisher;
 	private Genre genre;
 	private Platform platform;

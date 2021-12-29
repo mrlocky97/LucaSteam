@@ -14,17 +14,18 @@ import model.Platform;
 public interface IStock {
 	
 	public boolean addGame(Integer key, Game item) /*throws StockException*/;   
-	public void remove(Integer key) /*throws StockException*/;
+	//public void remove(Integer key) /*throws StockException*/;
 	public void printGames();  
-	public void printPublishers();
-	public void printYearsEven();
-	public void printXXcentury();
+	//public void printPublishers();
+	//public void printYearsEven();
+	//public void printXXcentury();
 	public void printByGenre(Genre genre);
-	public void printByNintendo(Platform platform);
+	//public void printByNintendo(Platform platform);
 	public List<CSVObject> loadList();// caga de csv a lista
-	public boolean isBusy();
+	//public boolean isBusy();
+			//METER A UTILIDADES O DATAINPUT
     public boolean gameExists(Game item);
-    public boolean gameExists(int key);    
+    		//I+d para ver si podemos convertir de LIST a COLLECTION y buscar mas eficientemente
     
     //public void serializarStock(String fichero);
     //public void deSerializarStock(String fichero);
