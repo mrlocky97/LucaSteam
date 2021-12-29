@@ -212,26 +212,29 @@ public class Stock implements IStock {
 	}
 
 	@Override
-	public List<CSVObject> loadList() {
+	public List<Game> loadList() {
 		try {
 			FileReader fl = new FileReader("./src/csv/vgsales.csv");
 			CSVReader reader = new CSVReaderBuilder(fl).withSkipLines(1). //
 					build();
-			List<CSVObject> csv_objectList = reader.readAll().stream().map(data -> {
-				CSVObject csvObject = new CSVObject();
-				csvObject.setName(data[1]);
-				csvObject.setPlatform(data[2]);
-				csvObject.setYear(data[3]);
-				csvObject.setGenre(data[4]);
-				csvObject.setPublisher(data[5]);
-				return csvObject;
+			List<Game> lsGame = reader.readAll().stream().map(data -> {
+				Game game = new Game();
+				game.setName(data[1]);
+				game.setPlatform(Platform.switchPlatform(data[2]));
+				game.setYear(Integer.parseInt(data[3]));
+				game.setGenre(Genre.switchPlatform(data[2]));
+				game.setPublisher(data[5]);
+				return game;
 			}).collect(Collectors.toList());
-			return csv_objectList;
+			// si el cs tiene datos diferentes a los no preestablecidos esto devuelve null y probablemente reviente....
+			for (Game game : lsGame) {
+				System.out.println(game.getName());
+			}
+			return lsGame;
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;
 		} catch (CsvException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		}
