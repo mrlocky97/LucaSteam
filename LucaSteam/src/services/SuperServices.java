@@ -5,6 +5,7 @@ import data.Stock;
 import model.Game;
 //import utilidades.Datos;
 import model.Genre;
+import model.Platform;
 import utilidades.DataInput;
 import utilidades.ReadEnum;
 
@@ -22,6 +23,12 @@ public class SuperServices implements ISuperServices {
 		Game g = new Game();
 		g.newGame();
 		return stock.addGame(g);
+	}
+	
+	public Game newGameP() {
+		Genre gen = Genre.SPORTS;
+		Platform p = Platform.PC;
+		return new Game("fifa", "1990", "microsoft", gen, p);
 	}
 
 	/*

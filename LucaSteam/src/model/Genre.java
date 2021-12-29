@@ -3,7 +3,8 @@ package model;
 public enum Genre {
 
 	PLATFORM("Platform"), SPORTS("Sports"), ROL("Role-Playing"), RACING("Racing"), MISC("Misc"), ACTION("Action"),
-	SHOOTER("Shooter"), PUZZLE("Puzzle"), SIMULATION("Simulation"), FIGHTING("Fighting"), STRATEGY("Strategy");
+	SHOOTER("Shooter"), PUZZLE("Puzzle"), SIMULATION("Simulation"), FIGHTING("Fighting"), STRATEGY("Strategy"),
+	ADVENTURE("Adventure");
 
 	private String g;
 
@@ -44,11 +45,11 @@ public enum Genre {
 			return null;
 		}
 	}
-	
+
 	public static boolean switchPlatform2(String val) {
 		boolean isNum = false;
 		try {
-			if (Genre.valueOf(val.toUpperCase())!= null) {
+			if (Genre.valueOf(val.toUpperCase()) != null) {
 				isNum = true;
 			}
 			return isNum;
