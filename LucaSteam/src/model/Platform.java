@@ -31,14 +31,27 @@ public enum Platform {
 	 */
 	// Comprobar que no nos devuelve un null
 	public static Platform switchPlatform(String val) {
-
 		try {
 			return Platform.valueOf(val);
 		} catch (Exception e) {
 			e.getMessage();
 			return null;
 		}
-
+	}
+	
+	public static boolean switchPlatform2(String val) {
+		boolean isNum = false;
+		try {
+			if (Platform.valueOf(val.toUpperCase())!= null) {
+				isNum = true;
+			}
+			return isNum;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println("Introduce uno de los valores especificos.");
+			e.getMessage();
+			return false;
+		}
 	}
 
 }

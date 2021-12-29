@@ -5,7 +5,7 @@ import utilidades.ReadEnum;
 
 public class Game {
 	private String name;
-	private int year;  //CAMBIAR A STRING
+	private int year; // CAMBIAR A STRING
 	private String publisher;
 	private Genre genre;
 	private Platform platform;
@@ -69,13 +69,32 @@ public class Game {
 			System.out.println("Escribe el Año");
 			this.year = DataInput.writeNumber();
 			System.out.println("Escribe el Publisher");
-			this.publisher=DataInput.writeLine();
+			this.publisher = DataInput.writeLine();
 			System.out.println("Debes elegir un Genero de la lista");
 			ReadEnum.readGenre();
 			System.out.println("Escribe el Genero Elegido");
-			this.genre= Genre.switchPlatform(DataInput.writeLine());
-			//this.platform=;
-			// 
+
+			boolean rompeBucle = false;
+			do {
+				String genero = DataInput.writeLine();
+				if (Genre.switchPlatform2(genero)) {
+					rompeBucle = true;
+					this.genre = Genre.switchPlatform(genero);
+				}
+			} while (!rompeBucle);
+
+			System.out.println("Debes elegir una plataforma de la lista");
+			ReadEnum.readPlatform();
+			System.out.println("Escribe la plataforma Elegido");
+			boolean rompeBucle2 = false;
+			do {
+				String genero = DataInput.writeLine();
+				if (Platform.switchPlatform2(genero)) {
+					rompeBucle2 = true;
+					this.platform = Platform.switchPlatform(DataInput.writeLine());
+				}// HAY QUE INTRODUCIR 2 VECES EL VALOR PARA QUE FUNCIONE
+			} while (!rompeBucle2);
+
 			return true;
 		} catch (Exception e) {
 			e.getStackTrace();
