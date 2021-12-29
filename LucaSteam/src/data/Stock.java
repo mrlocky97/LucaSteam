@@ -34,12 +34,12 @@ public class Stock implements IStock {
 	 */
 
 	public boolean addGame(Game item) { /// INTEGER DE KEY??????
-
 		if (gameExists(item) == true) {
 			return false;
+		}else {
+			this.items.add(item);
+			return true;
 		}
-		items.add(item);
-		return true;
 	}
 
 	/**
@@ -74,7 +74,6 @@ public class Stock implements IStock {
 			while (iterator.hasNext()) {
 				game = iterator.next();
 				if (game.getGenre().getGenre().compareTo(genre.getGenre()) == 0) {
-
 					System.out.println("Name: " + game.getName() + " Platform: " + game.getPlatform() + " Publisher: "
 							+ game.getPublisher() + " Year: " + game.getYear() + " Genre: " + game.getGenre());
 				}

@@ -4,6 +4,9 @@ import data.IStock;
 import data.Stock;
 import model.Game;
 //import utilidades.Datos;
+import model.Genre;
+import utilidades.DataInput;
+import utilidades.ReadEnum;
 
 public class SuperServices implements ISuperServices {
 
@@ -17,20 +20,8 @@ public class SuperServices implements ISuperServices {
 	// echar un vistazo
 	public boolean addGame() {
 		Game g = new Game();
-		return g.newGame();
-	}
-
-	/*
-	 * @param: Game g
-	 *
-	 * @return: Genera un codigo aleatorio (hash) para un objeto
-	 *
-	 */
-	@Override
-	public boolean addGame(Game g) {
-		// Habria que decidir un algoritmo de c√≥digos (una funciona Hash)
-		return stock.addGame(g); ////// SE LE HA BORRADO EL KEY, PORQUE ERA UN INTEGER. Y ya no tiene integer
-									////// nuestro Game.,.
+		g.newGame();
+		return stock.addGame(g);
 	}
 
 	/*
@@ -98,6 +89,23 @@ public class SuperServices implements ISuperServices {
 	public void saveFileCSV() {
 		// Por defecto
 		// stock.SaveStock(""); // AÒadir Ruta y cambiar nombre de llamada.
+	}
+
+	@Override
+	public void printByGenre() {
+		boolean rompeBucle = false;
+		Genre gen = null;
+		System.out.println("Debes elegir un Genero de la lista");
+		ReadEnum.readGenre();
+		System.out.println("Escribe el Genero Elegido");
+		do {
+			String genero = DataInput.writeLine();
+			if (Genre.switchPlatform2(genero)) {
+				rompeBucle = true;
+				gen = Genre.switchPlatform(genero);
+			}
+		} while (!rompeBucle);
+		stock.printByGenre(gen);
 	}
 
 }
