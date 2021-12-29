@@ -29,7 +29,7 @@ public class SuperServices implements ISuperServices {
 	@Override
 	public boolean addGame(Game g) {
 		// Habria que decidir un algoritmo de códigos (una funciona Hash)
-		return stock.addGame(0, g); ////// SE LE HA BORRADO EL KEY, PORQUE ERA UN INTEGER. Y ya no tiene integer
+		return stock.addGame(g); ////// SE LE HA BORRADO EL KEY, PORQUE ERA UN INTEGER. Y ya no tiene integer
 									////// nuestro Game.,.
 	}
 
