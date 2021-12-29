@@ -44,5 +44,20 @@ public enum Genre {
 			return null;
 		}
 	}
+	
+	public static boolean switchPlatform2(String val) {
+		boolean isNum = false;
+		try {
+			if (Genre.valueOf(val.toUpperCase())!= null) {
+				isNum = true;
+			}
+			return isNum;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println("Introduce uno de los valores especificos.");
+			e.getMessage();
+			return false;
+		}
+	}
 
 }
