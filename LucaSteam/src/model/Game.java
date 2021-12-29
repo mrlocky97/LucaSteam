@@ -1,6 +1,7 @@
 package model;
 
 import utilidades.DataInput;
+import utilidades.ReadEnum;
 
 public class Game {
 	private String name;
@@ -67,8 +68,14 @@ public class Game {
 			this.name = DataInput.writeLine();
 			System.out.println("Escribe el Año");
 			this.year = DataInput.writeNumber();
-			// this.platform;
-			// this.genre;
+			System.out.println("Escribe el Publisher");
+			this.publisher=DataInput.writeLine();
+			System.out.println("Debes elegir un Genero de la lista");
+			ReadEnum.readGenre();
+			System.out.println("Escribe el Genero Elegido");
+			this.genre= Genre.switchPlatform(DataInput.writeLine());
+			//this.platform=;
+			// 
 			return true;
 		} catch (Exception e) {
 			e.getStackTrace();
