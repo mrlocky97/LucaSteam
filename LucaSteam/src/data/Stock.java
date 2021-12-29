@@ -157,11 +157,11 @@ public class Stock implements IStock {
 	 * @param: none
 	 * @return: boolean
 	 */
-	public boolean isBusy() {
+	public boolean listEmpty() {
 		if (items.isEmpty()) {
-			return false;
+			return true;
 		}
-		return true;
+		return false;
 	}
 
 	/**
@@ -174,15 +174,7 @@ public class Stock implements IStock {
 		return items.containsValue(item);
 	}
 
-	/**
-	 * if a Game object exists by key
-	 * 
-	 * @param key
-	 * @return: boolean
-	 */
-	public boolean gameExists(int key) {
-		return items.containsKey(game);
-	}
+
 
 	/**
 	 * Update Game Object

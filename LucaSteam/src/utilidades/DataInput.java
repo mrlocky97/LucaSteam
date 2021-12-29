@@ -1,4 +1,4 @@
-package dataInput;
+package utilidades;
 
 import java.util.Scanner;
 
