@@ -21,7 +21,7 @@ public interface IStock {
 	//public void printXXcentury();
 	public void printByGenre(Genre genre);
 	//public void printByNintendo(Platform platform);
-	public List<CSVObject> loadList();// caga de csv a lista
+	public List<Game> loadList();// caga de csv a lista
 	//public boolean isBusy();
 			//METER A UTILIDADES O DATAINPUT
     public boolean gameExists(Game item);
