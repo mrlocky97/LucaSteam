@@ -13,7 +13,7 @@ import model.Platform;
  */ 
 public interface IStock {
 	
-	public boolean addGame(Integer key, Game item) /*throws StockException*/;   
+	public boolean addGame(Game item) /*throws StockException*/;   
 	//public void remove(Integer key) /*throws StockException*/;
 	public void printGames();  
 	//public void printPublishers();
