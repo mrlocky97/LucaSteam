@@ -37,8 +37,7 @@ public class User {
         try {
             switch (DataInput.writeNumber()) {//Lee un dato de tipo Int
                 case 1:
-                	// services.addGame();
-                    
+                	services.addGame();
                     
                     break;
 
@@ -48,7 +47,7 @@ public class User {
                     break;
 
                 case 3:
-                   //services.printByGenre();
+                   services.printByGenre();
                     
                     break;
 
