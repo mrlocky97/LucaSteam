@@ -1,6 +1,6 @@
 package exceptions;
 
-public class StockExceptions {
+public class StockExceptions extends Exception {
  /*
 	private Level level;
 
