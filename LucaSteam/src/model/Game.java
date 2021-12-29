@@ -5,7 +5,7 @@ import utilidades.ReadEnum;
 
 public class Game {
 	private String name;
-	private int year; // CAMBIAR A STRING
+	private String year; // CAMBIAR A STRING
 	private String publisher;
 	private Genre genre;
 	private Platform platform;
@@ -13,7 +13,7 @@ public class Game {
 	public Game() {
 	}
 
-	public Game(String name, int year, String publisher, Genre genre, Platform platform) {
+	public Game(String name, String year, String publisher, Genre genre, Platform platform) {
 		this.name = name;
 		this.year = year;
 		this.publisher = publisher;
@@ -29,11 +29,11 @@ public class Game {
 		this.name = name;
 	}
 
-	public int getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	public void setYear(int year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 
@@ -67,7 +67,7 @@ public class Game {
 			System.out.println("Escribe el Nombre del Juego");
 			this.name = DataInput.writeLine();
 			System.out.println("Escribe el Año");
-			this.year = DataInput.writeNumber();
+			this.year = DataInput.writeLine();
 			System.out.println("Escribe el Publisher");
 			this.publisher = DataInput.writeLine();
 			System.out.println("Debes elegir un Genero de la lista");
